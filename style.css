@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container > h1{
+    color: white;
+}
+#button {
+  padding: 1rem 3rem;
+  margin: 1rem 0;
+  outline: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: green;
+  color: white;
+}
+
+.color-show{
+    border-color: white;
+    width: 20px;
+    height: 10px;
+}
+
+.copy-btn{
+    cursor: pointer;
+}   
+
+.test{
+    position: top;
+    top: 2rem;
+    color: aliceblue;
+    background-color: green;
+    right: 2rem;
+    border: 1px solid white;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+
+
+
+
