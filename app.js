@@ -20,6 +20,8 @@ randomColorBtn.addEventListener('click', function () {
 
 })
 
+
+
 //copy the RGB color and Store In localStorage...
 
 copybtn.addEventListener('click', function () {
@@ -50,6 +52,9 @@ function showCopyCode(value) {
     })
     deleteItem.addEventListener('click', function () {
         createFooter.remove(storeDataInLocalStorage);
+        //click the delete button and remove the item from localStrorage...
+        storeDataInLocalStorage.splice(storeDataInLocalStorage.indexOf(value), 1);
+        localStorage.setItem('RGB_COLORS', JSON.stringify(storeDataInLocalStorage));
     })
 }
 
