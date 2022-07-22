@@ -53,8 +53,14 @@ function showCopyCode(value) {
     deleteItem.addEventListener('click', function () {
         createFooter.remove(storeDataInLocalStorage);
         //click the delete button and remove the item from localStrorage...
-        storeDataInLocalStorage.splice(storeDataInLocalStorage.indexOf(value), 1);
-        localStorage.setItem('RGB_COLORS', JSON.stringify(storeDataInLocalStorage));
+        let newStoreData = [];
+        let data = JSON.parse(getData);
+        data.forEach(item => {
+            if (item != value) {
+                newStoreData.push(item);
+            }
+            localStorage.setItem('RGB_COLORS', JSON.stringify(newStoreData));
+        })
     })
 }
 
