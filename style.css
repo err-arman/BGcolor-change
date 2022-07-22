@@ -83,6 +83,7 @@ body {
 }
 
 #delete-item{
+  text-decoration: none;
   background-color: green;
   border: none;
   color: white;

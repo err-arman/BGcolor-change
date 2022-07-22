@@ -1,4 +1,4 @@
-// All variables in therer...
+// All variables...
 let root = document.getElementById('root');
 let randomColorBtn = document.getElementById('random-color-btn');
 let outputColorCode = document.getElementById('output');
@@ -20,7 +20,7 @@ randomColorBtn.addEventListener('click', function () {
 
 })
 
-//copy button EventListener...
+//copy the RGB color and Store In localStorage...
 
 copybtn.addEventListener('click', function () {
     showCopyCode(outputColorCode.value)
@@ -35,17 +35,17 @@ function showCopyCode(value) {
     createShowColoCode.id = 'showColorCode';
     createShowColoCode.style.color = 'white';
     createShowColoCode.innerHTML = value;
-    let createBtn = document.createElement('button');
-    createBtn.id = 'reloadBtn';
-    createBtn.innerHTML = 'reloadBtn'
+    let reloadButton = document.createElement('button');
+    reloadButton.id = 'reloadBtn';
+    reloadButton.innerHTML = 'reloadBtn';
     let deleteItem = document.createElement('a');
     deleteItem.id = 'delete-item';
     deleteItem.href = "javascript:void(0)";
-    deleteItem.innerHTML = 'X'
-    createFooter.append(createShowColoCode, createBtn, deleteItem);
+    deleteItem.innerHTML = 'X';
+    createFooter.append(createShowColoCode, reloadButton, deleteItem);
     document.body.append(createFooter);
 
-    createBtn.addEventListener('click', function () {
+    reloadButton.addEventListener('click', function () {
         root.style.backgroundColor = value;
     })
     deleteItem.addEventListener('click', function () {
