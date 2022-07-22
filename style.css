@@ -6,7 +6,7 @@
 
 body {
   font-size: 16px;
-  background-color: black;
+  background-color: white;
   width: 100vw;
   height: 100vh;
 }
@@ -20,9 +20,9 @@ body {
   align-items: center;
 }
 .container > h1{
-    color: white;
+    color: red;
 }
-#button {
+#random-color-btn {
   padding: 1rem 3rem;
   margin: 1rem 0;
   outline: none;
@@ -48,17 +48,46 @@ body {
 }   
 
 .test{
-    position: top;
-    top: 2rem;
-    color: aliceblue;
-    background-color: green;
-    right: 2rem;
-    border: 1px solid white;
-    padding: 1rem 2rem;
-    cursor: pointer;
+  position: top;
+  top: 2rem;
+  color: aliceblue;
+  background-color: green;
+  right: 2rem;
+  border: 1px solid white;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+#footer{
+  display: flex;
+  gap: 10px;
+  
 }
 
 
+#showColorCode{
+  height: 25px;
+  width: 300px;
+  background-color: green;
+  margin-top: 10px;
+}
 
+#reloadBtn{
+  background-color: green;
+  border: none;
+  color: white;
+  height: 25px;
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 2px;
+}
 
-
+#delete-item{
+  background-color: green;
+  border: none;
+  color: white;
+  height: 25px;
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 2px;
+}

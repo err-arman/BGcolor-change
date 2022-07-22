@@ -12,7 +12,7 @@ if (getData) {
 }
 
 
-// Random color Show in ROOT backgound
+// Random color Show in backgound
 randomColorBtn.addEventListener('click', function () {
     let colorCode = genarateRGBcolor();
     outputColorCode.value = colorCode;
@@ -29,7 +29,6 @@ copybtn.addEventListener('click', function () {
 })
 // Show Copy item in bottom...
 function showCopyCode(value) {
-    let d = JSON.parse(getData)
     let createFooter = document.createElement('div');
     createFooter.id = 'footer';
     let createShowColoCode = document.createElement('div');
@@ -50,7 +49,6 @@ function showCopyCode(value) {
         root.style.backgroundColor = value;
     })
     deleteItem.addEventListener('click', function () {
-        removeColorFromLocalStorage(d)
         createFooter.remove(storeDataInLocalStorage);
     })
 }
@@ -63,14 +61,4 @@ function genarateRGBcolor() {
     return `rgb(${x}, ${y}, ${z})`;
 }
 
-function removeColorFromLocalStorage(item) {
-    let data = JSON.parse(getData);
-    let newData = [];
-    data.filter(function (el) {
-        if (el != item) {
-            newData.push(el);
-       }
-    })
 
-    localStorage.setItem('RGB_COLORS', JSON.stringify(newData))
-}
