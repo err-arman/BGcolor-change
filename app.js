@@ -21,8 +21,7 @@ randomColorBtn.addEventListener('click', function () {
 })
 
 
-
-//copy the RGB color and Store In localStorage...
+// copy the RGB color and Store In localStorage...
 
 copybtn.addEventListener('click', function () {
     showCopyCode(outputColorCode.value)
@@ -52,15 +51,7 @@ function showCopyCode(value) {
     })
     deleteItem.addEventListener('click', function () {
         createFooter.remove(storeDataInLocalStorage);
-        //click the delete button and remove the item from localStrorage...
-        let newStoreData = [];
-        let data = JSON.parse(getData);
-        data.forEach(item => {
-            if (item != value) {
-                newStoreData.push(item);
-            }
-            localStorage.setItem('RGB_COLORS', JSON.stringify(newStoreData));
-        })
+        deleteFromLocalStorage(value);
     })
 }
 
@@ -70,6 +61,20 @@ function genarateRGBcolor() {
     let y = Math.floor(Math.random() * 255 + 1);
     let z = Math.floor(Math.random() * 255 + 1);
     return `rgb(${x}, ${y}, ${z})`;
+}
+
+
+// delete from localStorage...
+function deleteFromLocalStorage(v) {
+    let data = JSON.parse(getData);
+    storeDataInLocalStorage = [];
+    data.forEach(item => {
+        console.log(item);
+        if (item != v) {
+            storeDataInLocalStorage.push(item);
+        }
+    })
+    localStorage.setItem('RGB_COLORS', JSON.stringify(storeDataInLocalStorage));
 }
 
 
